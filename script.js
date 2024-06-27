@@ -5,7 +5,17 @@ function createGrid(rows, columns) {
         const gridItem = document.createElement("div");
         gridItem.classList.add("grid-item");
         gridContainer.appendChild(gridItem);
+
+        gridItem.addEventListener("mouseover", () => {
+            gridItem.style.backgroundColor = "yellow";
+        });
+        gridItem.addEventListener("mouseout", () => {
+            setTimeout(() => {
+                gridItem.style.backgroundColor = "";
+            }, 500);
+        });
     }
 }
+
 
 createGrid(16, 16);
