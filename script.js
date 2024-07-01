@@ -9,11 +9,13 @@ function createGrid(rows, columns) {
         gridItem.addEventListener("mouseover", () => {
             gridItem.style.backgroundColor = "yellow";
         });
-        gridItem.addEventListener("mouseout", () => {
+
+
+      /* gridItem.addEventListener("mouseout", () => {
             setTimeout(() => {
                 gridItem.style.backgroundColor = "";
             }, 500);
-        });
+        }); */
     }
 }
 
@@ -25,7 +27,6 @@ function showForm() {
 // Function to hide the popup form
 function hideForm() {
     document.getElementById("myForm").style.display = "none";
-
 }
 
 
