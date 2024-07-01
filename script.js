@@ -9,13 +9,6 @@ function createGrid(rows, columns) {
         gridItem.addEventListener("mouseover", () => {
             gridItem.style.backgroundColor = "yellow";
         });
-
-
-      /* gridItem.addEventListener("mouseout", () => {
-            setTimeout(() => {
-                gridItem.style.backgroundColor = "";
-            }, 500);
-        }); */
     }
 }
 
