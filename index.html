@@ -9,13 +9,17 @@
 </head>
 <body>
     <div class="button-container">
-        <button class="open-button" href="#" onclick="show('form-popup')">Create your Canvas</button>
+        <button class="open-button" onclick="showForm()">Create your Canvas</button>
     </div>
 
-    <div class="form-popup" id="myform">
-        <p>Create you Canvas</p>
-        <input type="number" placeholder="Enter number (1-100) to set your canvas size" name="size" min="1" max="100" required>
-        <a href="#" onclick="hide('form-popup')">Submit</a>
+    <div class="form-popup" id="myForm">
+            <form class="form-container">
+                <h3>Create you Canvas</h3>
+                <p>Enter number (1-100) 
+                    to set your canvas size</p>
+                <input type="number" placeholder="select a number" name="size" min="1" max="100" required>
+                <button class="submit-button" onclick="hideForm()">Submit</button>
+                </form>
     </div>
 
     <div id="grid-container" class="grid-container"></div>

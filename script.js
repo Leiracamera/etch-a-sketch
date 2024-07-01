@@ -17,4 +17,16 @@ function createGrid(rows, columns) {
     }
 }
 
+// Function to show the popup form
+function showForm() {
+    document.getElementById("myForm").style.display = "block";
+}
+
+// Function to hide the popup form
+function hideForm() {
+    document.getElementById("myForm").style.display = "none";
+
+}
+
+
 createGrid(16, 16);

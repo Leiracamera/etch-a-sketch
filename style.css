@@ -1,8 +1,23 @@
+{box-sizing: border-box;}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .grid-container {
     display: flex;
     flex-wrap: wrap;
     width: 800px;
     gap: 0px;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px;
 }
 
 .grid-item {
@@ -14,6 +29,11 @@
 .button-container {
     text-align: center;
     padding: 20px;
+    position: relative;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .open-button {
@@ -28,6 +48,55 @@
 }
 
 .open-button:hover {
+    background-color: yellowgreen;
+    color: white
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    border: 3px solid darkolivegreen;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+.form-container input[type=number] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: coral;
+}
+
+.form-container input[type=number]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.form-container .submit-button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+  
+.form-container .submit-button:hover {
     background-color: yellowgreen;
     color: white
 }
