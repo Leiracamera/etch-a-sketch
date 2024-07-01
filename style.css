@@ -16,7 +16,7 @@
     padding: 20px;
 }
 
-.button {
+.open-button {
     background-color: #42b883;
     font-size: 24px;
     padding: 10px;
@@ -27,7 +27,7 @@
 
 }
 
-.button:hover {
+.open-button:hover {
     background-color: yellowgreen;
     color: white
 }

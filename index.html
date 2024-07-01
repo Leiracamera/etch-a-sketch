@@ -9,8 +9,15 @@
 </head>
 <body>
     <div class="button-container">
-        <button type="button" class="button" id="grid-size-btn">PRESS ME</button>
+        <button class="open-button" href="#" onclick="show('form-popup')">Create your Canvas</button>
     </div>
+
+    <div class="form-popup" id="myform">
+        <p>Create you Canvas</p>
+        <input type="number" placeholder="Enter number (1-100) to set your canvas size" name="size" min="1" max="100" required>
+        <a href="#" onclick="hide('form-popup')">Submit</a>
+    </div>
+
     <div id="grid-container" class="grid-container"></div>
     <script src="script.js"></script>
 </body>

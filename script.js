@@ -17,5 +17,4 @@ function createGrid(rows, columns) {
     }
 }
 
-
 createGrid(16, 16);
