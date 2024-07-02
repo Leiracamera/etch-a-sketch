@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-A-Sketch</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
     <div class="button-container">
@@ -13,13 +12,12 @@
     </div>
 
     <div class="form-popup" id="myForm">
-            <form class="form-container">
-                <h3>Create you Canvas</h3>
-                <p>Enter number (1-100) 
-                    to set your canvas size</p>
-                <input type="number" placeholder="select a number" name="size" min="1" max="100" required>
-                <button class="submit-button" onclick="hideForm()">Submit</button>
-                </form>
+        <form class="form-container" onsubmit="resetGridSize(); return false;"> <!-- Prevent default form submission and call resetGridSize -->
+            <h3>Create your Canvas</h3>
+            <p>Enter number (16-60) to set your canvas size</p>
+            <input class="input" type="number" id="gridSizeInput" placeholder="Select a number" name="size" min="16" max="60" required>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
     </div>
 
     <div id="grid-container" class="grid-container"></div>
