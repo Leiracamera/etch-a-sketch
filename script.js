@@ -5,7 +5,7 @@ const gridSize = 800; // total size of the grid in pixels
 function resetGridSize() {
     const input = parseInt(gridSizeInput.value);
 
-    if (isNaN(input) || input < 16 || input > 60) {
+    if (isNaN(input) || input < 10 || input > 100) {
         alert("Please enter a valid number between 1 and 100.");
         return;
     }
