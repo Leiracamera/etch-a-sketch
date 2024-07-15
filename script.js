@@ -20,7 +20,7 @@ function clearGrid() {
 }
 
 function createGrid(size) {
-    console.log(`Creating a grid with ${size} rows and ${size} squares`); // Log function entry
+    console.log(`Creating a grid with ${size} rows and ${size} columns`); // Log function entry
     const squareSize = gridSize / size; // Size of each square based on the input size
     console.log(`Calculated square size: ${squareSize}px`); // Log the calculated square size
 
@@ -41,7 +41,7 @@ function createGrid(size) {
         });
     }
 
-    console.log(`Finished creating grid with ${rows * columns} items`); // Log function exit
+    console.log(`Finished creating grid with ${size * size} items`); // Log function exit
 }
 
 // Function to show the popup form
