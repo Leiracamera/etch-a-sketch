@@ -11,7 +11,7 @@ function resetGridSize() {
     }
 
     clearGrid();
-    createGrid(input, input); // Create a grid with input x input squares
+    createGrid(input); // Create a grid with input x input squares
     hideForm();
 }
 
@@ -19,17 +19,17 @@ function clearGrid() {
     gridContainer.innerHTML = ''; // Remove all existing grid items
 }
 
-function createGrid(rows, columns) {
-    console.log(`Creating a grid with ${rows} rows and ${columns} columns`); // Log function entry
-    const squareSize = gridSize / Math.max(rows, columns); // Size of each square based on the larger dimension
+function createGrid(size) {
+    console.log(`Creating a grid with ${size} rows and ${size} squares`); // Log function entry
+    const squareSize = gridSize / size; // Size of each square based on the input size
     console.log(`Calculated square size: ${squareSize}px`); // Log the calculated square size
 
     // Set grid container layout
     gridContainer.style.display = "grid";
-    gridContainer.style.gridTemplateColumns = `repeat(${columns}, ${squareSize}px)`;
-    gridContainer.style.gridTemplateRows = `repeat(${rows}, ${squareSize}px)`;
+    gridContainer.style.gridTemplateColumns = `repeat(${size}, ${squareSize}px)`;
+    gridContainer.style.gridTemplateRows = `repeat(${size}, ${squareSize}px)`;
 
-    for (let i = 0; i < rows * columns; i++) {
+    for (let i = 0; i < size * size; i++) {
         const gridItem = document.createElement("div");
         gridItem.classList.add("grid-item");
         gridContainer.appendChild(gridItem);
