@@ -56,7 +56,7 @@ function hideForm() {
 
 
 function randomInteger(max) {
-    return Math.floor(Math.floor() * (max + 1));
+    return Math.floor(Math.random() * (max + 1));
 }
 
 function randomRgbColor() {
